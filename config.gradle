@@ -1,0 +1,30 @@
+ext{
+
+    android=[
+            compileSdkVersion      : 28,
+            applicationId          : "com.leanper.xjj",
+            minSdkVersion          : 19,
+            targetSdkVersion       : 28,
+            versionCode            : 1,
+            versionName            : "1.0"
+    ]
+    //因为support库都是同一个版本，单独拎出来，方便修改
+    dependVersion = [
+            support: "28.0.0"
+    ]
+
+
+
+    var = [
+
+            SupportV7 : "com.android.support:appcompat-v7:${dependVersion.support}",
+            SupportV4 : "com.android.support:support-v4:${dependVersion.support}",
+            appcompatV7: "com.android.support:appcompat-v7:${dependVersion.support}",
+            SupportRecyclerviewV7 : "com.android.support:recyclerview-v7:${dependVersion.support}",
+            Design: "com.android.support:design:${dependVersion.support}",
+            design         : "com.android.support:design:${dependVersion.support}",
+            recyclerview          :"com.android.support:recyclerview-v7:${dependVersion.support}",
+
+    ]
+
+}
