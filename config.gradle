@@ -17,13 +17,11 @@ ext{
 
     var = [
 
-            SupportV7 : "com.android.support:appcompat-v7:${dependVersion.support}",
-            SupportV4 : "com.android.support:support-v4:${dependVersion.support}",
-            appcompatV7: "com.android.support:appcompat-v7:${dependVersion.support}",
-            SupportRecyclerviewV7 : "com.android.support:recyclerview-v7:${dependVersion.support}",
-            Design: "com.android.support:design:${dependVersion.support}",
-            design         : "com.android.support:design:${dependVersion.support}",
-            recyclerview          :"com.android.support:recyclerview-v7:${dependVersion.support}",
+            SupportV7                       :"com.android.support:appcompat-v7:${dependVersion.support}",
+            SupportV4                       :"com.android.support:support-v4:${dependVersion.support}",
+            appcompatV7                     :"com.android.support:appcompat-v7:${dependVersion.support}",
+            SupportRecyclerviewV7          : "com.android.support:recyclerview-v7:${dependVersion.support}",
+            Design                          :"com.android.support:design:${dependVersion.support}",
 
     ]
 
