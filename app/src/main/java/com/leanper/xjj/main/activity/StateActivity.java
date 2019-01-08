@@ -35,13 +35,14 @@ public class StateActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i(TAG, "onCreate: ");
+        Log.i(TAG, "onCreate: 点击");
+
     }
 
     @Override
     protected void initStatusLayout() {
         statusLayoutManager = StateLayoutManager.newBuilder(this)
-                .contentView(R.layout.activity_content)
+                .contentView(R.layout.activity_state)
                 .emptyDataView(R.layout.activity_emptydata)
                 .errorView(R.layout.activity_error)
                 .loadingView(R.layout.activity_loading)
