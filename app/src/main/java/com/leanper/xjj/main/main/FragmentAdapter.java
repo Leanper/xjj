@@ -1,4 +1,4 @@
-package com.leanper.xjj.main;
+package com.leanper.xjj.main.main;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
