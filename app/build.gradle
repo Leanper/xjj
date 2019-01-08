@@ -34,4 +34,7 @@ dependencies {
     //黄油刀
     implementation 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+    //设置控件样式
+
 }

@@ -1,11 +1,13 @@
-package com.leanper.xjj.main;
+package com.leanper.xjj.main.main;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * 底部导航栏
      */
-    private String[] titles = new String[]{"新知识", "优化", "view/weight","添加项"};
+    private String[] titles = new String[]{"新知识", "优化", "view","添加项"};
 
     private String TAG = "MainActivity";
     //Tab标题集合
@@ -59,14 +61,16 @@ public class MainActivity extends AppCompatActivity {
     // ViewPage选项卡页面集合
     private List<Fragment> mListFragments = new ArrayList<>();
     private FragmentAdapter adapter;
-    //https://blog.csdn.net/lanchunhui/article/details/49494265
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bind = ButterKnife.bind(this);
-
+        DisplayMetrics dm = getResources().getDisplayMetrics();
+        int screenWidth = dm.widthPixels;
+        int screenHeight = dm.heightPixels;
+        Log.d(TAG, "onCreate: "+screenWidth+"=="+screenHeight);
         //初始化界面
         init();
     }
@@ -105,6 +109,8 @@ public class MainActivity extends AppCompatActivity {
 
                 ImageView imageView = (ImageView) itemTab.getCustomView().findViewById(R.id.iv_img);
                 imageView.setImageResource(mImgs[i]);
+
+
             }
         }
         mTabLayout.setOnTabSelectedListener(mOnTabSelectedListener);
@@ -118,8 +124,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onTabSelected(TabLayout.Tab tab) {
             //选中了tab的逻辑
-            if (tab.getPosition() == 2 || tab.getPosition() == 3) {
-            }
+            Animation animation= android.view.animation.AnimationUtils.loadAnimation(MainActivity.this,R.anim.bottom_navation_translate);
+
+
+            tab.getCustomView().startAnimation(animation);
+
+//            if (tab.getPosition() == 2 || tab.getPosition() == 3) {
+//            }
         }
 
         @Override
@@ -138,8 +149,12 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onTabReselected(TabLayout.Tab tab) {
-            //再次选中tab的逻辑
-            Log.d(TAG, "onTabReselected: ddd");
+            //再次选中tab的逻辑 仿取消按钮
+
+            //再次选择之后的动画
+            Animation animation= android.view.animation.AnimationUtils.loadAnimation(MainActivity.this,R.anim.bottom_navation_translate_again);
+            tab.getCustomView().startAnimation(animation);
+
 
         }
 

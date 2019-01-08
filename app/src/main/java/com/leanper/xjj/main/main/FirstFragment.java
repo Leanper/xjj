@@ -1,4 +1,4 @@
-package com.leanper.xjj.main;
+package com.leanper.xjj.main.main;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -21,7 +21,7 @@ import butterknife.Unbinder;
  * @date:   2018/12/25 9:39   
  
  */  
-public class SecondFragment extends Fragment {
+public class FirstFragment extends Fragment {
 
     private View mFragmentView;
     private Unbinder bind;
@@ -29,9 +29,15 @@ public class SecondFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-         mFragmentView = inflater.inflate(R.layout.fragment_second, container, false);
+         mFragmentView = inflater.inflate(R.layout.fragment_frist, container, false);
         bind = ButterKnife.bind(this, mFragmentView);
         return mFragmentView;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
     }
 
     @Override

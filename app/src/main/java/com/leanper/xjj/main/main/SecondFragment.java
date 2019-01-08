@@ -1,4 +1,4 @@
-package com.leanper.xjj.main;
+package com.leanper.xjj.main.main;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,15 +12,16 @@ import com.leanper.xjj.R;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+
 /**
  * @Title:  ThridFragment 
  
  * @Description:    
  * @author:  Leanper
- * @date:   2018/12/25 9:48
+ * @date:   2018/12/25 9:39   
  
  */  
-public class ThridFragment extends Fragment {
+public class SecondFragment extends Fragment {
 
     private View mFragmentView;
     private Unbinder bind;
@@ -28,7 +29,7 @@ public class ThridFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-         mFragmentView = inflater.inflate(R.layout.fragment_three, container, false);
+         mFragmentView = inflater.inflate(R.layout.fragment_second, container, false);
         bind = ButterKnife.bind(this, mFragmentView);
         return mFragmentView;
     }

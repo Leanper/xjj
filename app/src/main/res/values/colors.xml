@@ -15,6 +15,7 @@
     <color name="gray5">#EBEBEB</color>
     <color name="white">#FFFFFF</color>
     <color name="white_gray">#FcFcFc</color>
+    <color name="colorTheme">#FcFcFc</color>
 
     <color name="selector_theme">#FFFF00</color>
 
