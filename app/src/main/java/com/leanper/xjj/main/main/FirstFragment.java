@@ -45,4 +45,7 @@ public class FirstFragment extends Fragment {
         super.onDestroyView();
         bind.unbind();
     }
+
+
+
 }

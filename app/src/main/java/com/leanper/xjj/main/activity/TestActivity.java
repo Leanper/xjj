@@ -15,9 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.leanper.xjj.R;
-import com.leanper.xjj.main.view.state.HhItemClickListener;
-import com.leanper.xjj.main.view.state.MainAdapter;
-import com.leanper.xjj.main.view.state.StateLayoutManager;
+import com.leanper.xjj.main.view.state.state.StateLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,7 +46,7 @@ public class TestActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_content);
+        setContentView(R.layout.activity_base);
         initStatusLayout();
         initBaseView();
         ButterKnife.bind(this);

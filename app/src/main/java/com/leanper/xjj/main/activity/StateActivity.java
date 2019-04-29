@@ -12,9 +12,7 @@ import android.widget.Toast;
 
 import com.leanper.xjj.R;
 import com.leanper.xjj.main.base.BaseActivity;
-import com.leanper.xjj.main.view.state.HhItemClickListener;
-import com.leanper.xjj.main.view.state.MainAdapter;
-import com.leanper.xjj.main.view.state.StateLayoutManager;
+import com.leanper.xjj.main.view.state.state.StateLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,20 +27,19 @@ import java.util.List;
 public class StateActivity extends BaseActivity {
     private String TAG="StateActivity";
 
-    private MainAdapter adapter;
     private RecyclerView recyclerView;
     private List<String> lists = new ArrayList<>();
+    private MainAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.i(TAG, "onCreate: 点击");
-
     }
 
     @Override
     protected void initStatusLayout() {
         statusLayoutManager = StateLayoutManager.newBuilder(this)
-                .contentView(R.layout.activity_state)
+                .contentView(R.layout.activity_content)
                 .emptyDataView(R.layout.activity_emptydata)
                 .errorView(R.layout.activity_error)
                 .loadingView(R.layout.activity_loading)
@@ -67,7 +64,6 @@ public class StateActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 initEmptyDataView();
-                Log.i(TAG, "onClick: ");
             }
         });
         btn_error.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +76,7 @@ public class StateActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 initSettingNetwork();
+                Log.i(TAG, "onClick: ");
             }
         });
         btn_test.setOnClickListener(new View.OnClickListener() {
@@ -111,7 +108,6 @@ public class StateActivity extends BaseActivity {
         for(int a=0 ; a<50 ; a++){
             lists.add("这是第"+a+"条数据");
         }
-        Log.i(TAG, "initData: ");
     }
 
 
@@ -161,4 +157,5 @@ public class StateActivity extends BaseActivity {
             }
         });
     }
+
 }

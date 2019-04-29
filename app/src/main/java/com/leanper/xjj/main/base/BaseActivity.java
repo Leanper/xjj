@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.widget.LinearLayout;
 
 import com.leanper.xjj.R;
-import com.leanper.xjj.main.view.state.StateLayoutManager;
+import com.leanper.xjj.main.view.state.state.StateLayoutManager;
 
 
 /**

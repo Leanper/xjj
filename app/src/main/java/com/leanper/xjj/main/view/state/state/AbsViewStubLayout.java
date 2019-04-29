@@ -1,4 +1,4 @@
-package com.leanper.xjj.main.view.state;
+package com.leanper.xjj.main.view.state.state;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;
@@ -7,13 +7,14 @@ import android.view.ViewStub;
 
 
 /**
- * @Title:  AbsViewStubLayout 
- 
- * @Description:    
- * @author:  Leanper
- * @date:   2019/1/7 8:58
- 
- */  
+ * <pre>
+ *     @author yangchong
+ *     blog  : https://github.com/yangchong211
+ *     time  : 2017/7/6
+ *     desc  : ViewStubLayout
+ *     revise:
+ * </pre>
+ */
 public abstract class AbsViewStubLayout {
 
     protected ViewStub mLayoutVs;

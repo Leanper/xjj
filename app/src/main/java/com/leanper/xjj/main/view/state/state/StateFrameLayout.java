@@ -1,4 +1,4 @@
-package com.leanper.xjj.main.view.state;
+package com.leanper.xjj.main.view.state.state;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;

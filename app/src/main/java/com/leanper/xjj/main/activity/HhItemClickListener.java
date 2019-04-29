@@ -1,4 +1,4 @@
-package com.leanper.xjj.main.view.state;
+package com.leanper.xjj.main.activity;
 
 import android.view.View;
 

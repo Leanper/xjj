@@ -1,4 +1,4 @@
-package com.leanper.xjj.main.view.state;
+package com.leanper.xjj.main.activity;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +11,15 @@ import com.leanper.xjj.R;
 
 import java.util.List;
 
-
+/**
+ * ================================================
+ * 作    者：杨充
+ * 版    本：1.0
+ * 创建日期：2017/7/6
+ * 描    述：适配器
+ * 修订历史：
+ * ================================================
+ */
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> {
 
     private final List<String> list;
